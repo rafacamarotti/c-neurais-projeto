@@ -10,14 +10,14 @@ Webcam.set({
 });
 function take_snapshot(){
     Webcam.snap(function(data_uri){
-        document.getElementById("result").innerHTML= '<img id="selfie_image" src"'+data_uri+'"/>';    });
+        document.getElementById("result").innerHTML= '<img id="selfie_image" src="'+data_uri+'"/>';    });
 }
 console.log('ml5 version:',ml5.version);
 function modelLoaded(){
     console.log('model loaded');
 }
 function check(){
-    img= document.getElementById0('selfie_image');
+    img= document.getElementById('selfie_image');
     classifier.classify(img, gotResult);
 }
 function gotResult(error, results){
